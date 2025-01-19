@@ -1,0 +1,273 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddthdyxevjsil"]
+
+[ext_resource type="Script" path="res://jogo.gd" id="1_6ptga"]
+[ext_resource type="PackedScene" uid="uid://c6sjd5mw4kxh6" path="res://balão.tscn" id="1_m0wxv"]
+[ext_resource type="Texture2D" uid="uid://b27uj5k8ay3t7" path="res://lv1.png" id="1_vg4hu"]
+[ext_resource type="PackedScene" uid="uid://cayamrsqulrr1" path="res://spawner.tscn" id="2_135ea"]
+[ext_resource type="Texture2D" uid="uid://dm3trx35w3q2x" path="res://boss.png" id="5_cowmq"]
+[ext_resource type="FontFile" uid="uid://dcbvrr1ctkjok" path="res://ARCADECLASSIC.TTF" id="6_qhtvu"]
+
+[sub_resource type="Animation" id="Animation_d751g"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation_boss1/ColorRect:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-556, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animation_boss1/ColorRect:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-289, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animation_boss1/ColorRect:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("animation_boss1/ColorRect2:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-6, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("animation_boss1/ColorRect2:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(687, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("animation_boss1/ColorRect2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("animation_boss1/Sprite2D:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(610, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("animation_boss1/Sprite2D:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(747, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("animation_boss1/Sprite2D:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_1o7c2"]
+resource_name = "boss1"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation_boss1/ColorRect:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-556, -0.25, 0, 0.25, 0, -371, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animation_boss1/ColorRect:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-289, -0.25, 0, 0.25, 0, -129, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animation_boss1/ColorRect:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.437293, -0.25, 0, 0.25, 0, -0.380236, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("animation_boss1/ColorRect2:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-6, -0.25, 0, 0.25, 0, -114, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("animation_boss1/ColorRect2:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(687, -0.25, 0, 0.25, 0, 467, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("animation_boss1/ColorRect2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.335899, -0.25, 0, 0.25, 0, -0.335899, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("animation_boss1/Sprite2D:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(610, -0.25, 0, 0.25, 0, 330, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.6, 1)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("animation_boss1/Sprite2D:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(747, -0.25, 0, 0.25, 0, 293, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.6, 1)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("animation_boss1/Sprite2D:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.6, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ilc2p"]
+_data = {
+"RESET": SubResource("Animation_d751g"),
+"boss1": SubResource("Animation_1o7c2")
+}
+
+[node name="jogo" type="Node2D"]
+script = ExtResource("1_6ptga")
+
+[node name="Lv1" type="Sprite2D" parent="."]
+position = Vector2(250, 250)
+texture = ExtResource("1_vg4hu")
+
+[node name="balão" parent="." instance=ExtResource("1_m0wxv")]
+position = Vector2(409, 476)
+
+[node name="spawner" parent="." instance=ExtResource("2_135ea")]
+
+[node name="animation_boss1" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="animation_boss1"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_ilc2p")
+}
+
+[node name="ColorRect" type="ColorRect" parent="animation_boss1"]
+visible = false
+offset_left = -556.0
+offset_top = -289.0
+offset_right = 356.0
+offset_bottom = 178.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="animation_boss1"]
+texture_filter = 1
+position = Vector2(610, 747)
+scale = Vector2(3.35938, 3)
+texture = ExtResource("5_cowmq")
+
+[node name="ColorRect2" type="ColorRect" parent="animation_boss1"]
+offset_left = -6.0
+offset_top = 687.0
+offset_right = 943.0
+offset_bottom = 1206.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="animation_boss1/ColorRect2"]
+layout_mode = 0
+offset_left = 301.811
+offset_top = 15.3394
+offset_right = 704.811
+offset_bottom = 127.339
+theme_override_fonts/normal_font = ExtResource("6_qhtvu")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[shake]Cacto     Foda"
+
+[connection signal="animation_finished" from="animation_boss1/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

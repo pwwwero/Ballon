@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0si0b22m1gm5"]
+
+[ext_resource type="Script" path="res://arma.gd" id="1_kff02"]
+[ext_resource type="Texture2D" uid="uid://dtlq1uie2bdnw" path="res://arma.png" id="1_lrhey"]
+
+[node name="arma" type="Area2D"]
+position = Vector2(181, 223)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_kff02")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(40, -1)
+rotation = 0.313129
+texture = ExtResource("1_lrhey")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(55, -2.5)
+rotation = 0.409921
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
